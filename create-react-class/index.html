@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDN Home</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to CDN Home</h1>
+        <nav>
+            <ul>
+                <li><a href="https://home.521188.xyz">Proxy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Disclaimer:</h2>
+            <p>Welcome to our CDN service. Our platform is designed to accelerate content delivery and enhance website
+                performance. By utilizing our CDN service, you agree to the following terms: This service is to be used
+                strictly for lawful purposes. Any illegal or unauthorized use is prohibited. We do not take
+                responsibility for the content distributed through our CDN service. The use of this product is solely
+                for testing and evaluation purposes. Any consequences arising from the use of this service are not the
+                responsibility of the service provider.<br>Thank you for your understanding and compliance.</p>
+        </section>
+
+        <section>
+            <h2>Resources</h2>
+            <ul id="Resources"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="currentYear"></span> CDN Home</p>
+    </footer>
+
+    <script>
+
+        let dataArr = ["15.5.0.create-react-class.js","15.5.0.create-react-class.min.js","15.5.1.create-react-class.js","15.5.1.create-react-class.min.js","15.5.2.create-react-class.js","15.5.2.create-react-class.min.js","15.5.3.create-react-class.js","15.5.3.create-react-class.min.js","15.5.4.create-react-class.js","15.5.4.create-react-class.min.js","15.6.0.create-react-class.js","15.6.0.create-react-class.min.js","15.6.0-rc.0.create-react-class.js","15.6.0-rc.0.create-react-class.min.js","15.6.2.create-react-class.js","15.6.2.create-react-class.min.js","15.6.3.create-react-class.js","15.6.3.create-react-class.min.js","15.7.0.create-react-class.js","15.7.0.create-react-class.min.js"].reverse()
+
+        let dom = ``
+        for (let i = 0; i < dataArr.length; i++) {
+            const e = dataArr[i];
+            dom += `<li><a href="./${e}">${e}</a></li>`
+        }
+        document.getElementById("Resources").innerHTML = dom;
+        document.getElementById("currentYear").innerText = new Date().getFullYear();
+    </script>
+
+
+
+
+</body></html>
