@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDN Home</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to CDN Home</h1>
+        <nav>
+            <ul>
+                <li><a href="https://home.588568.xyz">Proxy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Disclaimer:</h2>
+            <p>Welcome to our CDN service. Our platform is designed to accelerate content delivery and enhance website
+                performance. By utilizing our CDN service, you agree to the following terms: This service is to be used
+                strictly for lawful purposes. Any illegal or unauthorized use is prohibited. We do not take
+                responsibility for the content distributed through our CDN service. The use of this product is solely
+                for testing and evaluation purposes. Any consequences arising from the use of this service are not the
+                responsibility of the service provider.<br>Thank you for your understanding and compliance.</p>
+        </section>
+
+        <section>
+            <h2>Resources</h2>
+            <ul id="Resources"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="currentYear"></span> CDN Home</p>
+    </footer>
+
+    <script>
+
+        let dataArr = ["0.1.0.axios.amd.js","0.1.0.axios.amd.map","0.1.0.axios.amd.min.js","0.1.0.axios.amd.min.map","0.1.0.axios.js","0.1.0.axios.map","0.1.0.axios.min.js","0.1.0.axios.min.map","0.10.0.axios.js","0.10.0.axios.map","0.10.0.axios.min.js","0.10.0.axios.min.map","0.11.0.axios.js","0.11.0.axios.map","0.11.0.axios.min.js","0.11.0.axios.min.map","0.11.1.axios.js","0.11.1.axios.map","0.11.1.axios.min.js","0.11.1.axios.min.map","0.12.0.axios.js"].reverse()
+
+        let dom = ``
+        for (let i = 0; i < dataArr.length; i++) {
+            const e = dataArr[i];
+            dom += `<li><a href="./${e}">${e}</a></li>`
+        }
+        document.getElementById("Resources").innerHTML = dom;
+        document.getElementById("currentYear").innerText = new Date().getFullYear();
+    </script>
+
+
+
+
+</body></html>
